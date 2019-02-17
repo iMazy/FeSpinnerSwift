@@ -12,6 +12,7 @@
 		6439568C2219032D00929D51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6439568A2219032D00929D51 /* Main.storyboard */; };
 		6439568E2219032E00929D51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6439568D2219032E00929D51 /* Assets.xcassets */; };
 		643956912219032E00929D51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6439568F2219032E00929D51 /* LaunchScreen.storyboard */; };
+		6439569F2219056B00929D51 /* FeTenDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6439569E2219056B00929D51 /* FeTenDot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		6439568D2219032E00929D51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		643956902219032E00929D51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		643956922219032E00929D51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6439569E2219056B00929D51 /* FeTenDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeTenDot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				6439569A221903B300929D51 /* AppDelegate */,
+				6439569B2219051700929D51 /* FeSpinner */,
 				643956982219039600929D51 /* Supporting Files */,
 			);
 			path = FeSpinnerSwift;
@@ -78,6 +81,30 @@
 				643956882219032D00929D51 /* ViewController.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		6439569B2219051700929D51 /* FeSpinner */ = {
+			isa = PBXGroup;
+			children = (
+				6439569C2219052F00929D51 /* Type */,
+			);
+			path = FeSpinner;
+			sourceTree = "<group>";
+		};
+		6439569C2219052F00929D51 /* Type */ = {
+			isa = PBXGroup;
+			children = (
+				6439569D2219053D00929D51 /* Ten Dot */,
+			);
+			path = Type;
+			sourceTree = "<group>";
+		};
+		6439569D2219053D00929D51 /* Ten Dot */ = {
+			isa = PBXGroup;
+			children = (
+				6439569E2219056B00929D51 /* FeTenDot.swift */,
+			);
+			path = "Ten Dot";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +180,7 @@
 			files = (
 				643956892219032D00929D51 /* ViewController.swift in Sources */,
 				643956872219032D00929D51 /* AppDelegate.swift in Sources */,
+				6439569F2219056B00929D51 /* FeTenDot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
