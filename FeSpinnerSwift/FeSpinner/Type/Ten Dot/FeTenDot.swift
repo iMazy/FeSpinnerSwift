@@ -24,17 +24,18 @@ class FeTenDot: UIView {
     private var indexDot: Int = 0
     private var originCenter: CGPoint = .zero
     
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
-    func initDotAtMainView(_ mainView: UIView, atIndex index: Int) {
+    convenience init(mainView: UIView, atIndex index: Int) {
+        
         let frame = CGRect(x: mainView.center.x, y: mainView.center.y, width: 20, height: 20)
-        self.frame = frame
+        self.init(frame: frame)
         
         // Deafault
         self.backgroundColor = .white
@@ -52,8 +53,11 @@ class FeTenDot: UIView {
         self.isUserInteractionEnabled = false
     }
     
+//    func initDotAtMainView(_ mainView: UIView, atIndex index: Int) {
+//    }
+//
 
-    func start() {
+    @objc func start() {
         if isAnimating {
             return
         }
