@@ -55,10 +55,12 @@ class FeSpinnerTenDot: UIView {
     
         self.init(frame: .zero)
     
-        assert(view.bounds.size.height <= 100, "Container view's height shouldn't less than 100")
+        assert(view.bounds.size.height > 100, "Container view's height shouldn't less than 100")
         containerView = view
         self.isHidden = true
         self.alpha = 0.0
+    
+        commonInit()
     }
     
     

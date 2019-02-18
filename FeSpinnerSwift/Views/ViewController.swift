@@ -1,0 +1,53 @@
+//
+//  ViewController.swift
+//  FeSpinnerSwift
+//
+//  Created by Mazy on 2019/2/17.
+//  Copyright © 2019 Mazy. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var tableView: UITableView!
+
+    lazy var dataSource: [String] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationItem.title = "FeSpinnerSwift"
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellID")
+        dataSource = ["Fe Spinner Ten Dot", "Loading Box", "Viet Nam Loader", "Three Dot Glow", "Wifi Hub", "Hour Glass", "Equalizer", "Rolling", "Handwriting"]
+    }
+}
+
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
+        cell.accessoryType = .disclosureIndicator
+        cell.textLabel?.text = dataSource[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        defer {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+        switch indexPath.row {
+        case 0:
+            let tenDotVc = TenDotViewController()
+            show(tenDotVc, sender: nil)
+        default:
+            break
+        }
+    }
+}
+
