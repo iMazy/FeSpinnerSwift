@@ -11,14 +11,16 @@ import UIKit
 class TenDotViewController: UIViewController {
 
     lazy var spinner: FeSpinnerTenDot = FeSpinnerTenDot(view: self.view, withBlur: false)
+    var titleArray: [String] = []
     var timer: Timer?
+    private var index: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor(hexStr: "019875")
-        
-        spinner.titleLabelText = "LOADING"
+        titleArray = ["LOADING", "PLZ WAITING", "CALM DOWN", "SUCCESSFUL"]
+        spinner.titleLabelText = titleArray[index]
         spinner.titleLabelFont = UIFont.systemFont(ofSize: 36)
         spinner.delegate = self
         view.addSubview(spinner)
@@ -28,12 +30,19 @@ class TenDotViewController: UIViewController {
         super.viewDidAppear(animated)
         
         start()
+        
+        self.perform(#selector(dismissed), with: nil, afterDelay: 7.0)
     }
     
     func start() {
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(changeTitle), userInfo: nil, repeats: true)
+
         spinner.showWhileExecutingSelector(#selector(longTask), onTarget: self, withObject: nil) {
-            
-            self.navigationController?.popViewController(animated: true)
+            self.timer?.invalidate()
+            self.timer = nil
+            self.index = 0
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
     
@@ -41,8 +50,20 @@ class TenDotViewController: UIViewController {
         sleep(5)
     }
     
-    func dismiss() {
+    @objc func dismissed() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func changeTitle() {
+        
+        print("index = \(index)")
+        
+        if index >= titleArray.count {
+            return
+        }
+        
+        spinner.titleLabelText = titleArray[index]
+        index += 1
     }
 }
 

@@ -52,20 +52,14 @@ class FeTenDot: UIView {
         
         self.isUserInteractionEnabled = false
     }
-    
-//    func initDotAtMainView(_ mainView: UIView, atIndex index: Int) {
-//    }
-//
 
     @objc func start() {
         if isAnimating {
             return
         }
-        if !isAnimating {
-            isAnimating = true
-            animate()
-            timer = Timer.scheduledTimer(timeInterval: 2.7, target: self, selector: #selector(animate), userInfo: nil, repeats: true)
-        }
+        isAnimating = true
+        animate()
+        timer = Timer.scheduledTimer(timeInterval: 2.7, target: self, selector: #selector(animate), userInfo: nil, repeats: true)
     }
     
     func stop() {
@@ -74,6 +68,7 @@ class FeTenDot: UIView {
         }
         if timer != nil && isAnimating {
             timer?.invalidate()
+            timer = nil
             isAnimating = false
         }
     }
@@ -85,12 +80,31 @@ class FeTenDot: UIView {
         originalTransform3D = transform3DAtIndex(indexDot)
         layer.transform = originalTransform3D
     }
+    
+    @objc func animate() {
+        UIView.animate(withDuration: FeTenDot.kDurationDot, delay: 0, options: .curveEaseOut, animations: {
+            self.layer.transform = CATransform3DIdentity
+        }) { (finish) in
+            if finish {
+                UIView.animate(withDuration: FeTenDot.kDurationDot, delay: 1.2, options: .curveEaseOut, animations: {
+                    self.layer.transform = self.originalTransform3D
+                    print(self.originalTransform3D)
+                }) { (_) in
+                    UIView.animate(withDuration: 0, delay: 1.2, options: .curveEaseOut, animations: {
+//                        self.layer.transform = CATransform3DIdentity
+                    }) { (_) in
+                        
+                    }
+                }
+            }
+        }
+    }
 
     func centerAtIndex(_  index: Int) -> CGPoint {
         var tempCenter: CGPoint = .zero
         switch index {
         case 0:
-            tempCenter = CGPoint(x: self.center.x - 10, y: self.center.y - 10)
+            tempCenter = CGPoint(x: self.center.x - 10, y: self.center.y - 50)
         case 1:
             tempCenter = CGPoint(x: self.center.x + 14, y: self.center.y - 43)
         case 2:
@@ -152,17 +166,5 @@ class FeTenDot: UIView {
             break
         }
         return t
-    }
-
-    @objc func animate() {
-        UIView.animate(withDuration: FeTenDot.kDurationDot, delay: 0, options: .curveEaseOut, animations: {
-            self.layer.transform = CATransform3DIdentity
-        }) { (_) in
-            UIView.animate(withDuration: 0, delay: 1.2, options: .curveEaseOut, animations: {
-                self.layer.transform = CATransform3DIdentity
-            }) { (_) in
-                
-            }
-        }
     }
 }

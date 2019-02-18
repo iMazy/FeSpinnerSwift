@@ -14,15 +14,22 @@ protocol FeSpinnerTenDotDelegate {
     func feSpinnerTenDotDidDismiss(_ sender: FeSpinnerTenDot)
 }
 
-
 class FeSpinnerTenDot: UIView {
     
     let kMaxTenDot: Int = 10
     let kPagingLabel: CGFloat = 30
 
     var delegate: FeSpinnerTenDotDelegate?
-    var titleLabelText: String = ""
-    var titleLabelFont: UIFont?
+    var titleLabelText: String = "" {
+        didSet {
+            setTitleLabelText(titleLabelText)
+        }
+    }
+    var titleLabelFont: UIFont? {
+        didSet {
+            resetLabel()
+        }
+    }
     
     private var targetForExecuting: NSObject?
     private var methodForExecuting: Selector?
@@ -41,7 +48,6 @@ class FeSpinnerTenDot: UIView {
     var label: UILabel?
     // Bool
     var isAnimating: Bool = false
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -119,21 +125,10 @@ class FeSpinnerTenDot: UIView {
     }
     
     func setTitleLabelText(_ text: String) {
-        if text == titleLabelText {
-            return
-        }
-        titleLabelText = text
+        
         if label == nil {
             initLabel()
         }
-        resetLabel()
-    }
-    
-    func setTitleLabelFont(_ font: UIFont) {
-        if font == titleLabelFont {
-            return
-        }
-        titleLabelFont = font
         resetLabel()
     }
     
