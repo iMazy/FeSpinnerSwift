@@ -45,6 +45,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         case 0:
             let tenDotVc = TenDotViewController()
             show(tenDotVc, sender: nil)
+        case 1:
+            let tenDotVc = FeLoadingBoxViewController()
+            show(tenDotVc, sender: nil)
         default:
             break
         }

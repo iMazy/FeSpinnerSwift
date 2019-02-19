@@ -18,6 +18,8 @@
 		643956A7221A973100929D51 /* TenDotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643956A6221A973100929D51 /* TenDotViewController.swift */; };
 		64FE44C9221BD30B00D59B5B /* FeLoadingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FE44C8221BD30B00D59B5B /* FeLoadingIcon.swift */; };
 		64FE44CB221BD73B00D59B5B /* FeLoadingIconBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FE44CA221BD73B00D59B5B /* FeLoadingIconBox.swift */; };
+		64FE44CD221BDD3D00D59B5B /* UIColor+Flat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FE44CC221BDD3D00D59B5B /* UIColor+Flat.swift */; };
+		64FE44CF221BE71D00D59B5B /* FeLoadingBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FE44CE221BE71D00D59B5B /* FeLoadingBoxViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		643956A6221A973100929D51 /* TenDotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenDotViewController.swift; sourceTree = "<group>"; };
 		64FE44C8221BD30B00D59B5B /* FeLoadingIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeLoadingIcon.swift; sourceTree = "<group>"; };
 		64FE44CA221BD73B00D59B5B /* FeLoadingIconBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeLoadingIconBox.swift; sourceTree = "<group>"; };
+		64FE44CC221BDD3D00D59B5B /* UIColor+Flat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Flat.swift"; sourceTree = "<group>"; };
+		64FE44CE221BE71D00D59B5B /* FeLoadingBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeLoadingBoxViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 			children = (
 				643956882219032D00929D51 /* ViewController.swift */,
 				643956A6221A973100929D51 /* TenDotViewController.swift */,
+				64FE44CE221BE71D00D59B5B /* FeLoadingBoxViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 			children = (
 				64FE44C8221BD30B00D59B5B /* FeLoadingIcon.swift */,
 				64FE44CA221BD73B00D59B5B /* FeLoadingIconBox.swift */,
+				64FE44CC221BDD3D00D59B5B /* UIColor+Flat.swift */,
 			);
 			path = LoadingBox;
 			sourceTree = "<group>";
@@ -218,10 +224,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				64FE44C9221BD30B00D59B5B /* FeLoadingIcon.swift in Sources */,
+				64FE44CD221BDD3D00D59B5B /* UIColor+Flat.swift in Sources */,
 				643956A12219102500929D51 /* FeSpinnerTenDot.swift in Sources */,
 				643956892219032D00929D51 /* ViewController.swift in Sources */,
 				643956872219032D00929D51 /* AppDelegate.swift in Sources */,
 				64FE44CB221BD73B00D59B5B /* FeLoadingIconBox.swift in Sources */,
+				64FE44CF221BE71D00D59B5B /* FeLoadingBoxViewController.swift in Sources */,
 				6439569F2219056B00929D51 /* FeTenDot.swift in Sources */,
 				643956A7221A973100929D51 /* TenDotViewController.swift in Sources */,
 				643956A3221A878F00929D51 /* UIColor+Extension.swift in Sources */,

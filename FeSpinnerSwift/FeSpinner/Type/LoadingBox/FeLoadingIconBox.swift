@@ -22,14 +22,16 @@ class FeLoadingIconBox: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func initWithBoxAtIndex(_ index: Int) {
+    convenience init(boxAtIndex index: Int) {
+        self.init(frame: .zero)
         let tempFrame = self.frameAtIndex(index)
         self.frame = tempFrame
+        
         backgroundColor = UIColor(r: 0, g: 0, b: 0, a: 0.2)
         isUserInteractionEnabled = false
     }
     
-    func startAnimate() {
+    @objc func startAnimate() {
         if isAnimating {
             return
         }
