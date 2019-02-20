@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		64076365221D33E100D0C65D /* FeVietNamBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64076364221D33E100D0C65D /* FeVietNamBar.swift */; };
+		64076367221D492F00D0C65D /* FeVietNamLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64076366221D492F00D0C65D /* FeVietNamLoader.swift */; };
 		643956872219032D00929D51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643956862219032D00929D51 /* AppDelegate.swift */; };
 		643956892219032D00929D51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643956882219032D00929D51 /* ViewController.swift */; };
 		6439568C2219032D00929D51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6439568A2219032D00929D51 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		64076364221D33E100D0C65D /* FeVietNamBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeVietNamBar.swift; sourceTree = "<group>"; };
+		64076366221D492F00D0C65D /* FeVietNamLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeVietNamLoader.swift; sourceTree = "<group>"; };
 		643956832219032D00929D51 /* FeSpinnerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeSpinnerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		643956862219032D00929D51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		643956882219032D00929D51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				64076364221D33E100D0C65D /* FeVietNamBar.swift */,
+				64076366221D492F00D0C65D /* FeVietNamLoader.swift */,
 			);
 			path = VietNamLoader;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				643956892219032D00929D51 /* ViewController.swift in Sources */,
 				643956872219032D00929D51 /* AppDelegate.swift in Sources */,
 				64076365221D33E100D0C65D /* FeVietNamBar.swift in Sources */,
+				64076367221D492F00D0C65D /* FeVietNamLoader.swift in Sources */,
 				64FE44CB221BD73B00D59B5B /* FeLoadingIconBox.swift in Sources */,
 				64FE44CF221BE71D00D59B5B /* FeLoadingBoxViewController.swift in Sources */,
 				6439569F2219056B00929D51 /* FeTenDot.swift in Sources */,
