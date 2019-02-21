@@ -51,7 +51,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         case 2:
             let vietNamLoaderVC = FeVietNamLoaderViewController()
             show(vietNamLoaderVC, sender: nil)
-
+        case 3:
+            let threeDotVC = FeThreeDotGlowViewController()
+            show(threeDotVC, sender: nil)
         default:
             break
         }

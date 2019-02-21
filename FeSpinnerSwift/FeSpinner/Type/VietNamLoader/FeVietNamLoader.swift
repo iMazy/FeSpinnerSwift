@@ -44,7 +44,7 @@ class FeVietNamLoader: UIView {
     }
     
     convenience init(withView view: UIView, colors: [UIColor]) {
-        self.init(frame: view.frame)
+        self.init(frame: view.bounds)
         
         container = view
         if colors.count > 0 {

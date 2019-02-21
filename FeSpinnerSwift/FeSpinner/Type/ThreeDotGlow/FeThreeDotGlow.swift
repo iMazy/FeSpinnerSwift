@@ -29,13 +29,9 @@ class FeThreeDotGlow: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
 
     convenience init(withView view: UIView) {
-        self.init(frame: CGRect.zero)
+        self.init(frame: view.bounds)
         
         containerView = view
         
@@ -43,6 +39,10 @@ class FeThreeDotGlow: UIView {
         initBackground()
         initThreeDot()
         initAnimations()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func show() {

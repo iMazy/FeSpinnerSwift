@@ -16,6 +16,8 @@ class FeVietNamLoaderViewController: UIViewController {
         super.viewDidLoad()
 
         edgesForExtendedLayout = []
+
+        view.backgroundColor = .white
         
         vietNamLoader = FeVietNamLoader(withView: self.view, colors: [])
         view.addSubview(vietNamLoader)
