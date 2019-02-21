@@ -48,6 +48,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         case 1:
             let tenDotVc = FeLoadingBoxViewController()
             show(tenDotVc, sender: nil)
+        case 2:
+            let vietNamLoaderVC = FeVietNamLoaderViewController()
+            show(vietNamLoaderVC, sender: nil)
+
         default:
             break
         }

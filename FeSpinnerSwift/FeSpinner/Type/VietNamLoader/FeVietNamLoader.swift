@@ -21,8 +21,16 @@ class FeVietNamLoader: UIView {
 
     var isAnimating: Bool = false
     var colorsArray: [UIColor] = []
-    var title: String = ""
-    var titleFont: UIFont?
+    var title: String = "" {
+        didSet {
+            resetLabel()
+        }
+    }
+    var titleFont: UIFont? {
+        didSet {
+            resetLabel()
+        }
+    }
     
     var container: UIView!
     var backgroundStatic: UIView!
@@ -49,7 +57,6 @@ class FeVietNamLoader: UIView {
         self.isHidden = true
         self.alpha = 0
         
-        
         commonInit()
         initBackground()
         initVietNamBars()
@@ -61,11 +68,40 @@ class FeVietNamLoader: UIView {
     }
     
     func show() {
+        if isAnimating {
+            return
+        }
         
+        isHidden = false
+        alpha = 0
+        
+        self.insertSubview(backgroundStatic, at: 0)
+        
+        UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseIn, animations: {
+            self.alpha = 1
+        }, completion: { _ in
+            self.isAnimating = true
+            for bar in self.vietNamBars {
+                bar.startAnimation()
+            }
+        })
     }
     
     func dismiss() {
-        
+        if !isAnimating {
+            return
+        }
+        UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseIn, animations: {
+            self.alpha = 0
+        }, completion: { _ in
+            self.isAnimating = false
+            
+            for bar in self.vietNamBars {
+                bar.stopAnimation()
+            }
+            
+            self.removeFromSuperview()
+        })
     }
     
     func showWhileExecutingClosure(_ closure: (()->Void)?) {
@@ -101,30 +137,79 @@ class FeVietNamLoader: UIView {
 extension FeVietNamLoader {
     
     func commonInit() {
-        
+        //
     }
     
     func initBackground() {
-        
+        backgroundStatic = UIView(frame: CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height))
+        backgroundStatic.isUserInteractionEnabled = false
+        backgroundStatic.backgroundColor = UIColor.flatWetAsphaltColor
     }
     
     func initVietNamBars() {
-        
+        for i in 1...kCountVietNamBar {
+            let bar = FeVietNamBar(atInex: i, colors: colorsArray)
+            self.layer.addSublayer(bar)
+            vietNamBars.append(bar)
+            
+            if i == 26 {
+                lastPosition = bar.position
+            }
+        }
     }
     
     func initLabel() {
         
+        label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        label?.textAlignment = .center
+        label?.text = "LOADING"
+        label?.font = UIFont.systemFont(ofSize: 36)
+        label?.textColor = UIColor.white
+        label?.sizeToFit()
+        label?.center = CGPoint(x: center.x, y: lastPosition.y + 40)
+        
+        self.addSubview(label!)
     }
     
     func resetLabel() {
-        
+        if isAnimating {
+            let animation = CATransition()
+            animation.duration = 0.8
+            animation.type = .fade
+            animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+            label?.layer.add(animation, forKey: "changeTextTransition")
+            
+            // change text
+            label?.font = self.titleFont
+            label?.text = self.title
+        } else {
+            // change text
+            label?.font = self.titleFont
+            label?.text = self.title
+        }
+        label?.sizeToFit()
+        label?.center = CGPoint(x: center.x, y: lastPosition.y + 40)
     }
     
     @objc func executingMethod() {
+        targetForExecuting?.perform(methodForExecuting, with: objectForExecuting)
         
+        DispatchQueue.main.async {
+            self.completionClosure?()
+            self.perform(#selector(self.cleanUp), on: .main, with: nil, waitUntilDone: false)
+        }
     }
     
     @objc func cleanUp() {
-        
+        if objectForExecuting != nil {
+            objectForExecuting = nil
+        }
+        if methodForExecuting != nil {
+            methodForExecuting = nil
+        }
+        if targetForExecuting != nil {
+            targetForExecuting = nil
+        }
+        dismiss()
     }
 }
