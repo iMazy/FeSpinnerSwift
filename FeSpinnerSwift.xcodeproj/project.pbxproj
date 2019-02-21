@@ -10,6 +10,7 @@
 		64076365221D33E100D0C65D /* FeVietNamBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64076364221D33E100D0C65D /* FeVietNamBar.swift */; };
 		64076367221D492F00D0C65D /* FeVietNamLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64076366221D492F00D0C65D /* FeVietNamLoader.swift */; };
 		64187199221E544200049C80 /* FeVietNamLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64187198221E544200049C80 /* FeVietNamLoaderViewController.swift */; };
+		6418719C221E58F300049C80 /* FeThreeDotGlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6418719B221E58F300049C80 /* FeThreeDotGlow.swift */; };
 		643956872219032D00929D51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643956862219032D00929D51 /* AppDelegate.swift */; };
 		643956892219032D00929D51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643956882219032D00929D51 /* ViewController.swift */; };
 		6439568C2219032D00929D51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6439568A2219032D00929D51 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		64076364221D33E100D0C65D /* FeVietNamBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeVietNamBar.swift; sourceTree = "<group>"; };
 		64076366221D492F00D0C65D /* FeVietNamLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeVietNamLoader.swift; sourceTree = "<group>"; };
 		64187198221E544200049C80 /* FeVietNamLoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeVietNamLoaderViewController.swift; sourceTree = "<group>"; };
+		6418719B221E58F300049C80 /* FeThreeDotGlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeThreeDotGlow.swift; sourceTree = "<group>"; };
 		643956832219032D00929D51 /* FeSpinnerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeSpinnerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		643956862219032D00929D51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		643956882219032D00929D51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,14 @@
 				64076366221D492F00D0C65D /* FeVietNamLoader.swift */,
 			);
 			path = VietNamLoader;
+			sourceTree = "<group>";
+		};
+		6418719A221E58CE00049C80 /* ThreeDotGlow */ = {
+			isa = PBXGroup;
+			children = (
+				6418719B221E58F300049C80 /* FeThreeDotGlow.swift */,
+			);
+			path = ThreeDotGlow;
 			sourceTree = "<group>";
 		};
 		6439567A2219032D00929D51 = {
@@ -124,6 +134,7 @@
 		6439569C2219052F00929D51 /* Type */ = {
 			isa = PBXGroup;
 			children = (
+				6418719A221E58CE00049C80 /* ThreeDotGlow */,
 				64076363221D33CA00D0C65D /* VietNamLoader */,
 				64FE44C7221BD2E100D59B5B /* LoadingBox */,
 				6439569D2219053D00929D51 /* Ten Dot */,
@@ -244,6 +255,7 @@
 				64FE44CD221BDD3D00D59B5B /* UIColor+Flat.swift in Sources */,
 				643956A12219102500929D51 /* FeSpinnerTenDot.swift in Sources */,
 				643956892219032D00929D51 /* ViewController.swift in Sources */,
+				6418719C221E58F300049C80 /* FeThreeDotGlow.swift in Sources */,
 				643956872219032D00929D51 /* AppDelegate.swift in Sources */,
 				64076365221D33E100D0C65D /* FeVietNamBar.swift in Sources */,
 				64187199221E544200049C80 /* FeVietNamLoaderViewController.swift in Sources */,
