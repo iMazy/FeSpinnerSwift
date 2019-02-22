@@ -11,6 +11,7 @@
 		64076367221D492F00D0C65D /* FeVietNamLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64076366221D492F00D0C65D /* FeVietNamLoader.swift */; };
 		640951E3221FDE8B00847AE4 /* FeWifiManHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640951E2221FDE8B00847AE4 /* FeWifiManHub.swift */; };
 		640951E5221FDE9400847AE4 /* FeWifiManHub.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640951E4221FDE9400847AE4 /* FeWifiManHub.xib */; };
+		640951E7221FF11400847AE4 /* FeWifiManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640951E6221FF11400847AE4 /* FeWifiManViewController.swift */; };
 		64187199221E544200049C80 /* FeVietNamLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64187198221E544200049C80 /* FeVietNamLoaderViewController.swift */; };
 		6418719C221E58F300049C80 /* FeThreeDotGlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6418719B221E58F300049C80 /* FeThreeDotGlow.swift */; };
 		6418719E221E5DE700049C80 /* FeThreeDotGlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6418719D221E5DE700049C80 /* FeThreeDotGlowViewController.swift */; };
@@ -34,6 +35,7 @@
 		64076366221D492F00D0C65D /* FeVietNamLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeVietNamLoader.swift; sourceTree = "<group>"; };
 		640951E2221FDE8B00847AE4 /* FeWifiManHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeWifiManHub.swift; sourceTree = "<group>"; };
 		640951E4221FDE9400847AE4 /* FeWifiManHub.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeWifiManHub.xib; sourceTree = "<group>"; };
+		640951E6221FF11400847AE4 /* FeWifiManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeWifiManViewController.swift; sourceTree = "<group>"; };
 		64187198221E544200049C80 /* FeVietNamLoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeVietNamLoaderViewController.swift; sourceTree = "<group>"; };
 		6418719B221E58F300049C80 /* FeThreeDotGlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeThreeDotGlow.swift; sourceTree = "<group>"; };
 		6418719D221E5DE700049C80 /* FeThreeDotGlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeThreeDotGlowViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				64FE44CE221BE71D00D59B5B /* FeLoadingBoxViewController.swift */,
 				64187198221E544200049C80 /* FeVietNamLoaderViewController.swift */,
 				6418719D221E5DE700049C80 /* FeThreeDotGlowViewController.swift */,
+				640951E6221FF11400847AE4 /* FeWifiManViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				643956892219032D00929D51 /* ViewController.swift in Sources */,
 				6418719C221E58F300049C80 /* FeThreeDotGlow.swift in Sources */,
 				643956872219032D00929D51 /* AppDelegate.swift in Sources */,
+				640951E7221FF11400847AE4 /* FeWifiManViewController.swift in Sources */,
 				64076365221D33E100D0C65D /* FeVietNamBar.swift in Sources */,
 				64187199221E544200049C80 /* FeVietNamLoaderViewController.swift in Sources */,
 				6418719E221E5DE700049C80 /* FeThreeDotGlowViewController.swift in Sources */,

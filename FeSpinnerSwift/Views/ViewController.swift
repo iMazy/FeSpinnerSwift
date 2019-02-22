@@ -54,6 +54,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         case 3:
             let threeDotVC = FeThreeDotGlowViewController()
             show(threeDotVC, sender: nil)
+        case 4:
+            let wifiManVC = FeWifiManViewController()
+            show(wifiManVC, sender: nil)
         default:
             break
         }

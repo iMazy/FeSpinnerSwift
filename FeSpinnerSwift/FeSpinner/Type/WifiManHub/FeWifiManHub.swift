@@ -89,7 +89,7 @@ class FeWifiManHub: UIView {
         
         let anim = CAKeyframeAnimation(keyPath: "contents")
         
-        let times = [NSNumber(value: 0.0), NSNumber(value: 0.25), NSNumber(value: 0.5), NSNumber(value: 0.75), NSNumber(value: 1,0)]
+        let times: [NSNumber] = [NSNumber(value: 0.0), NSNumber(value: 0.25), NSNumber(value: 0.5), NSNumber(value: 0.75), NSNumber(value: 1.0)]
         anim.keyTimes = times
         
         let image_1 = UIImage(named: "WifiMan_Sign_1")!.cgImage!
@@ -221,7 +221,7 @@ extension FeWifiManHub {
         let frame = CGRect(x: 48, y: 12, width: FeWifiManHub.kFe_WifiMan_Width, height: FeWifiManHub.kFe_WifiMan_Height)
         let coloredImage = UIImage(named: "WifiMan_Sign_1")
         
-        contentLayer? = CALayer()
+        contentLayer = CALayer()
         contentLayer?.frame = frame
         contentLayer?.backgroundColor = UIColor.clear.cgColor
         contentLayer?.contents = coloredImage?.cgImage
