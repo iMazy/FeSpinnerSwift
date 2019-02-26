@@ -57,6 +57,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         case 4:
             let wifiManVC = FeWifiManViewController()
             show(wifiManVC, sender: nil)
+        case 5:
+            let hoursGlassVC = FeHourGlassViewController()
+            show(hoursGlassVC, sender: nil)
         default:
             break
         }

@@ -59,6 +59,7 @@ extension FeHourGlass {
     
     func initCommon() {
         backgroundColor = UIColor(hexStr: "DB7769")
+        
         width = CGFloat(sqrtf(kFe_HourGlass_Length * kFe_HourGlass_Length + kFe_HourGlass_Length * kFe_HourGlass_Length))
         height = CGFloat(sqrtf(kFe_HourGlass_Length * kFe_HourGlass_Length - Float((width / 2.0) * (width / 2.0))))
     }
@@ -75,7 +76,7 @@ extension FeHourGlass {
     func initTop() {
         let path = UIBezierPath()
         path.move(to: .zero)
-        path.addLine(to: CGPoint(x: width, y: height * 2))
+        path.addLine(to: CGPoint(x: width, y: 2))
         path.addLine(to: CGPoint(x: width / 2, y: height))
         path.addLine(to: .zero)
         path.close()
