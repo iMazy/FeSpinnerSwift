@@ -60,6 +60,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         case 5:
             let hoursGlassVC = FeHourGlassViewController()
             show(hoursGlassVC, sender: nil)
+        case 6:
+            let equalizerVC = FeEqualizerViewController()
+            show(equalizerVC, sender: nil)
         default:
             break
         }

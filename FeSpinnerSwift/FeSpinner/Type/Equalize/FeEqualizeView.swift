@@ -97,7 +97,7 @@ extension FeEqualizeView {
                 thirdBar.frame = CGRect(x: origin.x, y: origin.y, width: kFe_Equalize_Width, height: kFe_Equalize_Height)
                 thirdBar.path = originalBezierPath.cgPath
                 thirdBar.fillColor = UIColor(hexStr: "79BD9A").cgColor
-                thirdBar.addSublayer(thirdBar)
+                containerLayer.addSublayer(thirdBar)
             case 3:
                 fourthBar = CAShapeLayer()
                 fourthBar.frame = CGRect(x: origin.x, y: origin.y, width: kFe_Equalize_Width, height: kFe_Equalize_Height)
@@ -127,7 +127,7 @@ extension FeEqualizeView {
         // end path
         endBezierPath = UIBezierPath()
         endBezierPath.move(to: CGPoint(x: 0, y: kFe_Equalize_Bar_Height))
-        endBezierPath.addLine(to: CGPoint(x: kFe_Equalize_Bar_Width / 2, y: kFe_Equalize_Bar_Height))
+        endBezierPath.addLine(to: CGPoint(x: kFe_Equalize_Bar_Width / 2, y: 0))
         endBezierPath.addLine(to: CGPoint(x: kFe_Equalize_Bar_Width, y: kFe_Equalize_Bar_Height))
         endBezierPath.addLine(to: CGPoint(x: 0, y: kFe_Equalize_Bar_Height))
         endBezierPath.close()
