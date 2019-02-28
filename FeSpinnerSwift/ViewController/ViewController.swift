@@ -63,6 +63,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         case 6:
             let equalizerVC = FeEqualizerViewController()
             show(equalizerVC, sender: nil)
+        case 7:
+            let rollingVC = FeRollingViewController()
+            show(rollingVC, sender: nil)
         default:
             break
         }

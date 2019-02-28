@@ -106,7 +106,7 @@ extension FeRollingLoader {
         let rect = CGRect(x: 0, y: 0, width: kFe_Circle_Width, height: kFe_Circle_Width)
         
         let refPath = CGMutablePath()
-        refPath.move(to: CGPoint(x: rect.minX, y: rect.minY))
+        refPath.move(to: CGPoint(x: rect.minX, y: rect.midY))
         refPath.addArc(tangent1End: CGPoint(x: rect.minX, y: rect.minY), tangent2End: CGPoint(x: rect.midX, y: rect.minY), radius: bottomLeft)
         refPath.addArc(tangent1End: CGPoint(x: rect.maxX, y: rect.minY), tangent2End: CGPoint(x: rect.maxX, y: rect.midY), radius: bottomRight)
         refPath.addArc(tangent1End: CGPoint(x: rect.maxX, y: rect.maxY), tangent2End: CGPoint(x: rect.midX, y: rect.maxY), radius: topRight)
