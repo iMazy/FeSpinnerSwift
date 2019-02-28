@@ -15,7 +15,6 @@ class FeEqualizeView: UIView {
     private var objectForExecuting: NSObject?
     private var completionClosure: (()->Void)?
     
-    
     private let kFe_Equalize_Width: CGFloat = 100.0
     private let kFe_Equalize_Height: CGFloat = 50.0
     private let kFe_Equalize_Bar_Width: CGFloat = 20.0
@@ -157,53 +156,12 @@ extension FeEqualizeView {
             return animation
         }
         
-        // first animation
-        firstAnimation   = createPathAnimation()
+        // animations
+        firstAnimation  = createPathAnimation()
         secondAnimation = createPathAnimation()
         thirdAnimation  = createPathAnimation()
         fourthAnimation = createPathAnimation()
-        fifthAnimation   = createPathAnimation()
-        
-//        firstAnimation = CABasicAnimation(keyPath: "path")
-//        firstAnimation.fromValue = originalBezierPath.cgPath
-//        firstAnimation.toValue = endBezierPath.cgPath
-//        firstAnimation.autoreverses = true
-//        firstAnimation.duration = 0.5
-//        firstAnimation.repeatCount = MAXFLOAT
-//        firstAnimation.timingFunction = CAMediaTimingFunction(controlPoints: 0.77, 0, 0.175, 1)
-//
-//        secondAnimation = CABasicAnimation(keyPath: "path")
-//        secondAnimation.fromValue = originalBezierPath.cgPath
-//        secondAnimation.toValue = endBezierPath.cgPath
-//        secondAnimation.autoreverses = true
-//        secondAnimation.duration = 0.5
-//        secondAnimation.repeatCount = MAXFLOAT
-//        secondAnimation.timingFunction = CAMediaTimingFunction(controlPoints: 0.77, 0, 0.175, 1)
-//
-//        thirdAnimation = CABasicAnimation(keyPath: "path")
-//        thirdAnimation.fromValue = originalBezierPath.cgPath
-//        thirdAnimation.toValue = endBezierPath.cgPath
-//        thirdAnimation.autoreverses = true
-//        thirdAnimation.duration = 0.5
-//        thirdAnimation.repeatCount = MAXFLOAT
-//        thirdAnimation.timingFunction = CAMediaTimingFunction(controlPoints: 0.77, 0, 0.175, 1)
-//
-//        fourthAnimation = CABasicAnimation(keyPath: "path")
-//        fourthAnimation.fromValue = originalBezierPath.cgPath
-//        fourthAnimation.toValue = endBezierPath.cgPath
-//        fourthAnimation.autoreverses = true
-//        fourthAnimation.duration = 0.5
-//        fourthAnimation.repeatCount = MAXFLOAT
-//        fourthAnimation.timingFunction = CAMediaTimingFunction(controlPoints: 0.77, 0, 0.175, 1)
-//
-//        fifthnimation = CABasicAnimation(keyPath: "path")
-//        fifthnimation.fromValue = originalBezierPath.cgPath
-//        fifthnimation.toValue = endBezierPath.cgPath
-//        fifthnimation.autoreverses = true
-//        fifthnimation.duration = 0.5
-//        fifthnimation.repeatCount = MAXFLOAT
-//        fifthnimation.timingFunction = CAMediaTimingFunction(controlPoints: 0.77, 0, 0.175, 1)
-
+        fifthAnimation  = createPathAnimation()
     }
 }
 

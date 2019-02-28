@@ -18,6 +18,7 @@
 		6418719C221E58F300049C80 /* FeThreeDotGlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6418719B221E58F300049C80 /* FeThreeDotGlow.swift */; };
 		6418719E221E5DE700049C80 /* FeThreeDotGlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6418719D221E5DE700049C80 /* FeThreeDotGlowViewController.swift */; };
 		643168DA22252C5600740220 /* FeEqualizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643168D922252C5600740220 /* FeEqualizeView.swift */; };
+		643915A922277B5B009BD9FF /* FeRollingLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643915A822277B5B009BD9FF /* FeRollingLoader.swift */; };
 		643956872219032D00929D51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643956862219032D00929D51 /* AppDelegate.swift */; };
 		643956892219032D00929D51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643956882219032D00929D51 /* ViewController.swift */; };
 		6439568C2219032D00929D51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6439568A2219032D00929D51 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		6418719B221E58F300049C80 /* FeThreeDotGlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeThreeDotGlow.swift; sourceTree = "<group>"; };
 		6418719D221E5DE700049C80 /* FeThreeDotGlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeThreeDotGlowViewController.swift; sourceTree = "<group>"; };
 		643168D922252C5600740220 /* FeEqualizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeEqualizeView.swift; sourceTree = "<group>"; };
+		643915A822277B5B009BD9FF /* FeRollingLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeRollingLoader.swift; sourceTree = "<group>"; };
 		643956832219032D00929D51 /* FeSpinnerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeSpinnerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		643956862219032D00929D51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		643956882219032D00929D51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,14 @@
 			path = Equalize;
 			sourceTree = "<group>";
 		};
+		643915A722277B43009BD9FF /* Rolling */ = {
+			isa = PBXGroup;
+			children = (
+				643915A822277B5B009BD9FF /* FeRollingLoader.swift */,
+			);
+			path = Rolling;
+			sourceTree = "<group>";
+		};
 		6439567A2219032D00929D51 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +185,7 @@
 		6439569C2219052F00929D51 /* Type */ = {
 			isa = PBXGroup;
 			children = (
+				643915A722277B43009BD9FF /* Rolling */,
 				643168D822252C2C00740220 /* Equalize */,
 				640951E82223D05700847AE4 /* HourGlass */,
 				640951E1221FDE7800847AE4 /* WifiManHub */,
@@ -303,6 +314,7 @@
 				64FE44C9221BD30B00D59B5B /* FeLoadingIcon.swift in Sources */,
 				64FE44CD221BDD3D00D59B5B /* UIColor+Flat.swift in Sources */,
 				640951E3221FDE8B00847AE4 /* FeWifiManHub.swift in Sources */,
+				643915A922277B5B009BD9FF /* FeRollingLoader.swift in Sources */,
 				643956A12219102500929D51 /* FeSpinnerTenDot.swift in Sources */,
 				643956892219032D00929D51 /* ViewController.swift in Sources */,
 				640951EA2223D06C00847AE4 /* FeHourGlass.swift in Sources */,
