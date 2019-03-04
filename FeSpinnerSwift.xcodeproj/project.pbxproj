@@ -152,10 +152,10 @@
 		643956852219032D00929D51 /* FeSpinnerSwift */ = {
 			isa = PBXGroup;
 			children = (
-				643956A5221A970E00929D51 /* Tools */,
-				643956A4221A96FF00929D51 /* ViewController */,
 				6439569A221903B300929D51 /* AppDelegate */,
-				6439569B2219051700929D51 /* FeSpinner */,
+				6439569B2219051700929D51 /* FeSpinnerType */,
+				643956A4221A96FF00929D51 /* ViewController */,
+				643956A5221A970E00929D51 /* Tools */,
 				643956982219039600929D51 /* Supporting Files */,
 			);
 			path = FeSpinnerSwift;
@@ -180,15 +180,7 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		6439569B2219051700929D51 /* FeSpinner */ = {
-			isa = PBXGroup;
-			children = (
-				6439569C2219052F00929D51 /* Type */,
-			);
-			path = FeSpinner;
-			sourceTree = "<group>";
-		};
-		6439569C2219052F00929D51 /* Type */ = {
+		6439569B2219051700929D51 /* FeSpinnerType */ = {
 			isa = PBXGroup;
 			children = (
 				6498A908222D329400DE34A9 /* Handwriting */,
@@ -201,7 +193,7 @@
 				64FE44C7221BD2E100D59B5B /* LoadingBox */,
 				6439569D2219053D00929D51 /* Ten Dot */,
 			);
-			path = Type;
+			path = FeSpinnerType;
 			sourceTree = "<group>";
 		};
 		6439569D2219053D00929D51 /* Ten Dot */ = {
