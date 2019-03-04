@@ -66,6 +66,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         case 7:
             let rollingVC = FeRollingViewController()
             show(rollingVC, sender: nil)
+        case 8:
+            let handwritingVC = FeHandwritingViewController()
+            show(handwritingVC, sender: nil)
         default:
             break
         }

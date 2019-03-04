@@ -31,6 +31,7 @@
 		643956A7221A973100929D51 /* TenDotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643956A6221A973100929D51 /* TenDotViewController.swift */; };
 		646F2473222646CE0085B959 /* FeEqualizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646F2472222646CE0085B959 /* FeEqualizerViewController.swift */; };
 		6498A90A222D32AA00DE34A9 /* FeHandwritingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6498A909222D32AA00DE34A9 /* FeHandwritingView.swift */; };
+		6498A90C222D51CD00DE34A9 /* FeHandwritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6498A90B222D51CD00DE34A9 /* FeHandwritingViewController.swift */; };
 		64FE44C9221BD30B00D59B5B /* FeLoadingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FE44C8221BD30B00D59B5B /* FeLoadingIcon.swift */; };
 		64FE44CB221BD73B00D59B5B /* FeLoadingIconBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FE44CA221BD73B00D59B5B /* FeLoadingIconBox.swift */; };
 		64FE44CD221BDD3D00D59B5B /* UIColor+Flat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FE44CC221BDD3D00D59B5B /* UIColor+Flat.swift */; };
@@ -64,6 +65,7 @@
 		643956A6221A973100929D51 /* TenDotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenDotViewController.swift; sourceTree = "<group>"; };
 		646F2472222646CE0085B959 /* FeEqualizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeEqualizerViewController.swift; sourceTree = "<group>"; };
 		6498A909222D32AA00DE34A9 /* FeHandwritingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeHandwritingView.swift; sourceTree = "<group>"; };
+		6498A90B222D51CD00DE34A9 /* FeHandwritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeHandwritingViewController.swift; sourceTree = "<group>"; };
 		64FE44C8221BD30B00D59B5B /* FeLoadingIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeLoadingIcon.swift; sourceTree = "<group>"; };
 		64FE44CA221BD73B00D59B5B /* FeLoadingIconBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeLoadingIconBox.swift; sourceTree = "<group>"; };
 		64FE44CC221BDD3D00D59B5B /* UIColor+Flat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Flat.swift"; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				640951EB2223EF3900847AE4 /* FeHourGlassViewController.swift */,
 				646F2472222646CE0085B959 /* FeEqualizerViewController.swift */,
 				643915AA222784FF009BD9FF /* FeRollingViewController.swift */,
+				6498A90B222D51CD00DE34A9 /* FeHandwritingViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				6418719C221E58F300049C80 /* FeThreeDotGlow.swift in Sources */,
 				643956872219032D00929D51 /* AppDelegate.swift in Sources */,
 				640951E7221FF11400847AE4 /* FeWifiManViewController.swift in Sources */,
+				6498A90C222D51CD00DE34A9 /* FeHandwritingViewController.swift in Sources */,
 				643168DA22252C5600740220 /* FeEqualizeView.swift in Sources */,
 				64076365221D33E100D0C65D /* FeVietNamBar.swift in Sources */,
 				64187199221E544200049C80 /* FeVietNamLoaderViewController.swift in Sources */,
