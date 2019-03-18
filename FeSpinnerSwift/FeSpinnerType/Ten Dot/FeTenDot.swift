@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// 点
 class FeTenDot: UIView {
 
     static var kMargeCenterX: CGFloat = 10
@@ -19,8 +20,6 @@ class FeTenDot: UIView {
     private var timer: Timer?
     private var isAnimating: Bool = false
     
-    // Main View
-    private var mainView: UIView!
     private var indexDot: Int = 0
     private var originCenter: CGPoint = .zero
     
@@ -34,14 +33,14 @@ class FeTenDot: UIView {
     
     convenience init(mainView: UIView, atIndex index: Int) {
         
-        let frame = CGRect(x: mainView.center.x, y: mainView.center.y, width: 20, height: 20)
+        let frame = CGRect(x: (mainView.bounds.width - 20) / 2, y: (mainView.bounds.height - 20) / 2, width: 20, height: 20)
         self.init(frame: frame)
         
-        // Deafault
+        // Default
         self.backgroundColor = .white
-        self.layer.cornerRadius = self.bounds.size.width / 2;
+        self.layer.cornerRadius = self.bounds.size.width / 2
         self.clipsToBounds = true
-        self.mainView = mainView
+
         self.indexDot = index
         
         self.center = centerAtIndex(index)
@@ -88,7 +87,6 @@ class FeTenDot: UIView {
             if finish {
                 UIView.animate(withDuration: FeTenDot.kDurationDot, delay: 1.2, options: .curveEaseOut, animations: {
                     self.layer.transform = self.originalTransform3D
-                    print(self.originalTransform3D)
                 }) { (_) in
                     UIView.animate(withDuration: 0, delay: 1.2, options: .curveEaseOut, animations: {
 //                        self.layer.transform = CATransform3DIdentity
@@ -134,37 +132,28 @@ class FeTenDot: UIView {
         switch index {
         case 0:
             t = CATransform3DTranslate(t, 10 - FeTenDot.kMargeCenterX, 50 - FeTenDot.kMargeCenterY, 0)
-            t = CATransform3DScale(t, 0.1, 0.1, 0.1)
         case 1:
             t = CATransform3DTranslate(t, -14 - FeTenDot.kMargeCenterX, 43 - FeTenDot.kMargeCenterY, 0)
-            t = CATransform3DScale(t, 0.1, 0.1, 0.1)
         case 2:
             t = CATransform3DTranslate(t, -29 - FeTenDot.kMargeCenterX, 24 - FeTenDot.kMargeCenterY, 0)
-            t = CATransform3DScale(t, 0.1, 0.1, 0.1)
         case 3:
             t = CATransform3DTranslate(t, -29 - FeTenDot.kMargeCenterX, 0 - FeTenDot.kMargeCenterY, 0)
-            t = CATransform3DScale(t, 0.1, 0.1, 0.1)
         case 4:
             t = CATransform3DTranslate(t, -15 - FeTenDot.kMargeCenterX, -22 - FeTenDot.kMargeCenterY, 0)
-            t = CATransform3DScale(t, 0.1, 0.1, 0.1)
         case 5:
             t = CATransform3DTranslate(t, 10 - FeTenDot.kMargeCenterX, -30 - FeTenDot.kMargeCenterY, 0)
-            t = CATransform3DScale(t, 0.1, 0.1, 0.1)
         case 6:
             t = CATransform3DTranslate(t, 35 - FeTenDot.kMargeCenterX, -22 - FeTenDot.kMargeCenterY, 0)
-            t = CATransform3DScale(t, 0.1, 0.1, 0.1)
         case 7:
             t = CATransform3DTranslate(t, 49 - FeTenDot.kMargeCenterX, 0 - FeTenDot.kMargeCenterY, 0)
-            t = CATransform3DScale(t, 0.1, 0.1, 0.1)
         case 8:
             t = CATransform3DTranslate(t, 49 - FeTenDot.kMargeCenterX, 24 - FeTenDot.kMargeCenterY, 0)
-            t = CATransform3DScale(t, 0.1, 0.1, 0.1)
         case 9:
             t = CATransform3DTranslate(t, 34 - FeTenDot.kMargeCenterX, 43 - FeTenDot.kMargeCenterY, 0)
-            t = CATransform3DScale(t, 0.1, 0.1, 0.1)
         default:
             break
         }
+        t = CATransform3DScale(t, 0.1, 0.1, 0.1)
         return t
     }
 }

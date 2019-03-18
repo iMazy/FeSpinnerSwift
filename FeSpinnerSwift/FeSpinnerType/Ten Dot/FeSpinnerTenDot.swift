@@ -36,12 +36,8 @@ class FeSpinnerTenDot: UIView {
     private var objectForExecuting: NSObject?
     private var completionClosure: (()->Void)?
     
-    // Background Static for Blur View
-    var backgroundStatic: UIView?
     // Array of dot
     var arrDot: [FeTenDot] = []
-    // Container View
-    var containerView: UIView!
     // Timer
     var timer: Timer?
     // Label
@@ -51,41 +47,30 @@ class FeSpinnerTenDot: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-   convenience init(view: UIView, withBlur blur: Bool) {
-    
-        self.init(frame: .zero)
-    
-        assert(view.bounds.size.height > 100, "Container view's height shouldn't less than 100")
-        containerView = view
-        self.isHidden = true
-        self.alpha = 0.0
-    
+        
         commonInit()
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        commonInit()
+    }
     
     private func commonInit() {
-        self.frame = containerView.bounds
         
-        backgroundStatic = UIView(frame: containerView.bounds)
-        backgroundStatic?.backgroundColor = UIColor(hexStr: "32ce55")
+        self.isHidden = true
+        self.alpha = 0.0
         
         initDot()
     }
     
     func initDot() {
-        let tempCenter = self.center
-        let centerDot = UIView(frame: CGRect(x: tempCenter.x, y: tempCenter.y, width: 20, height: 20))
+        
+        let centerDot = UIView(frame: CGRect(x: (bounds.width - 20) / 2, y: (bounds.height - 20) / 2, width: 20, height: 20))
         centerDot.clipsToBounds = true
         centerDot.layer.cornerRadius = centerDot.bounds.size.height / 2
         centerDot.backgroundColor = .white
-        centerDot.center = tempCenter
         
         self.addSubview(centerDot)
         
@@ -139,9 +124,7 @@ class FeSpinnerTenDot: UIView {
         
         self.isHidden = false
         self.alpha = 1
-        
-        self.insertSubview(backgroundStatic!, at: 0)
-        
+                
         delegate?.feSpinnerTenDotWillShow(self)
         
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {

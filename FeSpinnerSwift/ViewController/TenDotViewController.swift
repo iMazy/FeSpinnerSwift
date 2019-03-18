@@ -10,7 +10,7 @@ import UIKit
 
 class TenDotViewController: UIViewController {
 
-    lazy var spinner: FeSpinnerTenDot = FeSpinnerTenDot(view: self.view, withBlur: false)
+    var spinner: FeSpinnerTenDot!
     var titleArray: [String] = []
     var timer: Timer?
     private var index: Int = 0
@@ -20,7 +20,10 @@ class TenDotViewController: UIViewController {
 
         view.backgroundColor = UIColor(hexStr: "019875")
         titleArray = ["LOADING", "PLZ WAITING", "CALM DOWN", "SUCCESSFUL"]
+        
+        spinner = FeSpinnerTenDot(frame: CGRect(x: (view.bounds.width - 100) / 2, y: (view.bounds.height - 100) / 2, width: 100, height: 100))
         spinner.titleLabelText = titleArray[index]
+        spinner.backgroundColor = .green
         spinner.titleLabelFont = UIFont.systemFont(ofSize: 36)
         spinner.delegate = self
         view.addSubview(spinner)
