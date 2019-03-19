@@ -17,7 +17,6 @@ class FeThreeDotGlow: UIView {
     
     var isShowing: Bool = false
     
-    private var containerView: UIView!
     private var containerDotLayer: CALayer!
     private var threeDots: [CALayer] = []
     private var rotateAnimation: CABasicAnimation!
@@ -28,21 +27,19 @@ class FeThreeDotGlow: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setup()
     }
 
-    convenience init(withView view: UIView) {
-        self.init(frame: view.bounds)
-        
-        containerView = view
-        
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    func setup() {
         commonInit()
         initBackground()
         initThreeDot()
         initAnimations()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     func show() {
@@ -136,9 +133,10 @@ extension FeThreeDotGlow {
     func initThreeDot() {
         
         containerDotLayer = CALayer()
-        containerDotLayer.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        containerDotLayer.frame = CGRect(x: (bounds.width - 50) / 2, y: (bounds.height - 50) / 2, width: 50, height: 50)
         containerDotLayer.backgroundColor = UIColor.clear.cgColor
-        containerDotLayer.position = self.center
+//        containerDotLayer.position = self.center
+        self.layer.addSublayer(containerDotLayer)
         
         for i in 0..<3 {
             let dot = CALayer()
@@ -166,7 +164,6 @@ extension FeThreeDotGlow {
             containerDotLayer.addSublayer(dot)
             threeDots.append(dot)
         }
-        self.layer.addSublayer(containerDotLayer)
     }
     
     func initAnimations() {

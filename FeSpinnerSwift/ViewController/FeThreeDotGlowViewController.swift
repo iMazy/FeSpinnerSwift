@@ -17,7 +17,7 @@ class FeThreeDotGlowViewController: UIViewController {
 
         view.backgroundColor = UIColor.flatWetAsphaltColor
         
-        threeDot = FeThreeDotGlow(withView: self.view)
+        threeDot = FeThreeDotGlow(frame: CGRect(x: (view.bounds.width - 50) / 2, y: (view.bounds.height - 50) / 2, width: 50, height: 50))
         view.addSubview(threeDot)
         
         threeDot.showWhileExecutingClosure({

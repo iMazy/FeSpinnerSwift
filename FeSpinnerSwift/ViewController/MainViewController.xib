@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="loadingIconView" destination="And-UU-Y9U" id="dK5-kP-fXl"/>
                 <outlet property="tenDotView" destination="T7I-Ez-tMb" id="Mfj-PZ-SHF"/>
+                <outlet property="threeDotView" destination="haD-py-S4A" id="LLM-HR-zNw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,13 +39,23 @@
                         <constraint firstAttribute="height" constant="100" id="lIh-hx-8R7"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haD-py-S4A" customClass="FeThreeDotGlow" customModule="FeSpinnerSwift" customModuleProvider="target">
+                    <rect key="frame" x="137.5" y="310" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.3750048876" green="0.76263898610000003" blue="0.62743699549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Cor-0V-cyJ"/>
+                        <constraint firstAttribute="width" constant="100" id="g49-ri-9ha"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="And-UU-Y9U" firstAttribute="top" secondItem="T7I-Ez-tMb" secondAttribute="bottom" constant="20" id="0Lr-Dy-2gi"/>
+                <constraint firstItem="haD-py-S4A" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="3si-J5-gtZ"/>
                 <constraint firstItem="T7I-Ez-tMb" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="4G0-1X-K3d"/>
                 <constraint firstItem="T7I-Ez-tMb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="8My-N7-bfx"/>
                 <constraint firstItem="And-UU-Y9U" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="UGZ-iL-zon"/>
+                <constraint firstItem="haD-py-S4A" firstAttribute="top" secondItem="And-UU-Y9U" secondAttribute="bottom" constant="20" id="yTE-jR-6M3"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="138.40000000000001" y="154.27286356821591"/>
