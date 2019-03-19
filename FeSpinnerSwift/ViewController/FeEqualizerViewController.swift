@@ -14,8 +14,10 @@ class FeEqualizerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        equalizer = FeEqualizeView(withView: self.view, title: "Loading")
+        
+        view.backgroundColor = UIColor.flatWetAsphaltColor
+        equalizer = FeEqualizeView(frame: CGRect(x: (view.bounds.width - 100) / 2, y: (view.bounds.height - 100) / 2, width: 100, height: 100))
+//        equalizer.title = "Loading"
         self.view.addSubview(equalizer)
         
         equalizer

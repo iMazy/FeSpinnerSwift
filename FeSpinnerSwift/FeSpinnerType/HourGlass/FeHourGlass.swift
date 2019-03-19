@@ -27,7 +27,6 @@ class FeHourGlass: UIView {
     var bottomLayer: CAShapeLayer!
     var lineLayer: CAShapeLayer!
     var containerLayer: CALayer!
-    var containerView: UIView!
     
     var topAnimation: CAKeyframeAnimation!
     var bottomAnimaiton: CAKeyframeAnimation!
@@ -36,16 +35,15 @@ class FeHourGlass: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        setup()
     }
     
-    convenience init(withView view: UIView) {
-        self.init(frame: view.bounds)
-        containerView = view
-        
+    func setup() {
         initCommon()
         initContainer()
         initTop()

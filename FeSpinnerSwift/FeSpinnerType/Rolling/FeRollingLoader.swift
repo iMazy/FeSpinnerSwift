@@ -20,10 +20,7 @@ class FeRollingLoader: UIView {
     private let kFe_Color_Salmon: String = "FA8072"
     
     var isShowing: Bool = false
-    var title: String = ""
-    
-    // container
-    var containerView: UIView!
+
     // circle
     var circleLayer: CAShapeLayer!
     // keyframe
@@ -34,12 +31,17 @@ class FeRollingLoader: UIView {
     // group
     var groupAnimation: CAAnimationGroup!
     
-    convenience init(withView view: UIView, title: String) {
-        self.init(frame: view.bounds)
-        
-        self.containerView = view
-        self.title = title
-        
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    func setup() {
         initCommon()
         initCircle()
         initAnimation()
@@ -49,7 +51,7 @@ class FeRollingLoader: UIView {
 extension FeRollingLoader {
     
     func initCommon() {
-        self.backgroundColor = UIColor(hexStr: "FEEADF")
+//        self.backgroundColor = UIColor(hexStr: "FEEADF")
     }
     
     func initCircle() {

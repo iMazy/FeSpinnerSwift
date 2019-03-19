@@ -13,6 +13,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tenDotView: FeSpinnerTenDot!
     @IBOutlet weak var loadingIconView: FeLoadingIcon!
     @IBOutlet weak var threeDotView: FeThreeDotGlow!
+    @IBOutlet weak var hourGlassView: FeHourGlass!
+    @IBOutlet weak var equalizeView: FeEqualizeView!
+    @IBOutlet weak var rollingLoaderView: FeRollingLoader!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,5 +25,11 @@ class MainViewController: UIViewController {
         loadingIconView.show()
         
         threeDotView.show()
+        
+        hourGlassView.show()
+        
+        equalizeView.show()
+        
+        rollingLoaderView.show()
     }
 }

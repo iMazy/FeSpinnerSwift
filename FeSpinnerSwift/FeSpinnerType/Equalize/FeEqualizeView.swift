@@ -21,10 +21,13 @@ class FeEqualizeView: UIView {
     private let kFe_Equalize_Bar_Height: CGFloat = 50.0
     
     var isShowing: Bool = false
-    var title: String?
+    var title: String = "" {
+        didSet {
+            initTitle()
+        }
+    }
     
     // container view
-    var containerView: UIView!
     var containerLayer: CALayer!
     // bars
     var firstBar: CAShapeLayer!
@@ -45,12 +48,17 @@ class FeEqualizeView: UIView {
     
     var titleLabel: UILabel!
     
-    convenience init(withView view: UIView, title: String) {
-        self.init(frame: view.bounds)
-        
-        self.title = title
-        self.containerView = view
-        
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    func setup() {
         initCommon()
         initContainerLayer()
         initBezierPath()
@@ -133,7 +141,7 @@ extension FeEqualizeView {
     }
     
     func initTitle() {
-        titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
         titleLabel.text = title
         titleLabel.textAlignment = .center
         titleLabel.textColor = UIColor(hexStr: "CFF09E")
@@ -173,11 +181,11 @@ extension FeEqualizeView {
         }
         isShowing = true
 
-        self.perform(#selector(addFirstAnimation), with: nil, afterDelay: 0)
+        self.perform(#selector(addFirstAnimation),  with: nil, afterDelay: 0.0)
         self.perform(#selector(addSecondAnimation), with: nil, afterDelay: 0.1)
-        self.perform(#selector(addThirdAnimation), with: nil, afterDelay: 0.2)
+        self.perform(#selector(addThirdAnimation),  with: nil, afterDelay: 0.2)
         self.perform(#selector(addFourthAnimation), with: nil, afterDelay: 0.3)
-        self.perform(#selector(addFifthAnimation), with: nil, afterDelay: 0.4)
+        self.perform(#selector(addFifthAnimation),  with: nil, afterDelay: 0.4)
     }
     
     func dismiss() {

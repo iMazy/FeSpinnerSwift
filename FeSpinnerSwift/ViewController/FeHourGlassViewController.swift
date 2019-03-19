@@ -14,8 +14,9 @@ class FeHourGlassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        hoursGlass = FeHourGlass(withView: self.view)
+        
+        view.backgroundColor = UIColor.flatWetAsphaltColor
+        hoursGlass = FeHourGlass(frame: CGRect(x: (view.bounds.width - 100) / 2, y: (view.bounds.height - 100) / 2, width: 100, height: 100))
         view.addSubview(hoursGlass)
         
         hoursGlass.showWhileExecutingClosure({

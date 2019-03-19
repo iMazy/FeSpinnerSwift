@@ -14,8 +14,9 @@ class FeRollingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        rollingLoader = FeRollingLoader(withView: self.view, title: "Loading")
+        
+        view.backgroundColor = UIColor.flatWetAsphaltColor
+        rollingLoader = FeRollingLoader(frame: CGRect(x: (view.bounds.width - 100) / 2, y: (view.bounds.height - 100) / 2, width: 100, height: 100))
         view.addSubview(rollingLoader)
         
         rollingLoader.showWhileExecutingClosure({
