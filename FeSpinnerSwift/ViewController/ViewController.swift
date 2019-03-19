@@ -22,6 +22,11 @@ class ViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellID")
         dataSource = ["Fe Spinner Ten Dot", "Loading Box", "Viet Nam Loader", "Three Dot Glow", "Wifi Hub", "Hour Glass", "Equalizer", "Rolling", "Handwriting"]
     }
+    
+    @IBAction func showTotalAnimations() {
+        let mainVC = MainViewController()
+        self.show(mainVC, sender: nil)
+    }
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {

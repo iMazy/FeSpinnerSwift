@@ -36,7 +36,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ljb-Dq-5dl"/>
+                    <navigationItem key="navigationItem" id="ljb-Dq-5dl">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="SIQ-Va-KeI">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uMc-FX-vhP">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="More"/>
+                                <connections>
+                                    <action selector="showTotalAnimations" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mei-zQ-vL0"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Vq0-9x-qmI" id="lHX-KX-A6E"/>
                     </connections>

@@ -88,11 +88,11 @@ class FeTenDot: UIView {
                 UIView.animate(withDuration: FeTenDot.kDurationDot, delay: 1.2, options: .curveEaseOut, animations: {
                     self.layer.transform = self.originalTransform3D
                 }) { (_) in
-                    UIView.animate(withDuration: 0, delay: 1.2, options: .curveEaseOut, animations: {
-//                        self.layer.transform = CATransform3DIdentity
-                    }) { (_) in
-                        
-                    }
+//                    UIView.animate(withDuration: 0, delay: 1.2, options: .curveEaseOut, animations: {
+////                        self.layer.transform = CATransform3DIdentity
+//                    }) { (_) in
+//
+//                    }
                 }
             }
         }
@@ -102,25 +102,25 @@ class FeTenDot: UIView {
         var tempCenter: CGPoint = .zero
         switch index {
         case 0:
-            tempCenter = CGPoint(x: self.center.x - 10, y: self.center.y - 50)
+            tempCenter = CGPoint(x: self.center.x - 0, y: self.center.y - 40)
         case 1:
-            tempCenter = CGPoint(x: self.center.x + 14, y: self.center.y - 43)
+            tempCenter = CGPoint(x: self.center.x + 24, y: self.center.y - 33)
         case 2:
-            tempCenter = CGPoint(x: self.center.x + 29, y: self.center.y - 24)
+            tempCenter = CGPoint(x: self.center.x + 39, y: self.center.y - 14)
         case 3:
-            tempCenter = CGPoint(x: self.center.x + 29, y: self.center.y)
+            tempCenter = CGPoint(x: self.center.x + 39, y: self.center.y + 10)
         case 4:
-            tempCenter = CGPoint(x: self.center.x + 15, y: self.center.y + 22)
+            tempCenter = CGPoint(x: self.center.x + 25, y: self.center.y + 32)
         case 5:
-            tempCenter = CGPoint(x: self.center.x - 10, y: self.center.y + 30)
+            tempCenter = CGPoint(x: self.center.x - 0, y: self.center.y + 40)
         case 6:
-            tempCenter = CGPoint(x: self.center.x - 35, y: self.center.y + 22)
+            tempCenter = CGPoint(x: self.center.x - 25, y: self.center.y + 32)
         case 7:
-            tempCenter = CGPoint(x: self.center.x - 49, y: self.center.y)
+            tempCenter = CGPoint(x: self.center.x - 39, y: self.center.y + 10)
         case 8:
-            tempCenter = CGPoint(x: self.center.x - 49, y: self.center.y - 24)
+            tempCenter = CGPoint(x: self.center.x - 39, y: self.center.y - 14)
         case 9:
-            tempCenter = CGPoint(x: self.center.x - 34, y: self.center.y - 43)
+            tempCenter = CGPoint(x: self.center.x - 24, y: self.center.y - 33)
         default:
             break
         }
