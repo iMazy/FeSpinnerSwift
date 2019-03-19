@@ -17,7 +17,7 @@ class FeLoadingBoxViewController: UIViewController {
         
         view.backgroundColor = UIColor(hexStr: "019875")
         
-        loadingIcon = FeLoadingIcon(with: self.view, backgroundColors: [])
+        loadingIcon = FeLoadingIcon(frame: CGRect(x: (view.bounds.width - 100) / 2, y: (view.bounds.height - 100) / 2, width: 100, height: 100))
         view.addSubview(loadingIcon)
         
         loadingIcon.showWhileExecutingClosure({

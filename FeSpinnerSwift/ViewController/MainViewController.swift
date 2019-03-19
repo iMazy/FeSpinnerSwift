@@ -11,10 +11,13 @@ import UIKit
 class MainViewController: UIViewController {
 
     @IBOutlet weak var tenDotView: FeSpinnerTenDot!
+    @IBOutlet weak var loadingIconView: FeLoadingIcon!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tenDotView.show()
+        
+        loadingIconView.show()
     }
 }

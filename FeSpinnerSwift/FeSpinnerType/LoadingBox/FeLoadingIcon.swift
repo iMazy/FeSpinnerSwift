@@ -21,9 +21,7 @@ class FeLoadingIcon: UIView {
     
     var isAnimating: Bool = false
     var delegate: FeLoadingIconDelegate?
-    var containerView: UIView!
     var bigBoxView: UIView!
-    var backgroundStatic: UIView!
     var boxArray: [FeLoadingIconBox] = []
     var colorArray: [UIColor] = []
     var timer: Timer?
@@ -35,18 +33,15 @@ class FeLoadingIcon: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        setup()
     }
     
-    convenience init(with view: UIView, backgroundColors colorArray:  [UIColor]) {
-        let frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height)
-        self.init(frame: frame)
-        
-        containerView = view
-        initBackgroundView()
+    func setup() {
         commitInit()
         initColor()
         initBox()
@@ -58,7 +53,6 @@ class FeLoadingIcon: UIView {
         }
         isHidden = false
         alpha = 0
-        self.insertSubview(backgroundStatic, at: 0)
         delegate?.feLoadingIconWillShow(self)
         
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
@@ -142,16 +136,9 @@ extension FeLoadingIcon {
         alpha = 0
     }
     
-    func initBackgroundView() {
-        backgroundStatic = UIView(frame: CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height))
-        backgroundStatic?.isUserInteractionEnabled = false
-        backgroundStatic?.backgroundColor = UIColor.flatCarrotColor
-    }
-    
     func initBox() {
         // init big box
         bigBoxView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        bigBoxView.center = self.center
         bigBoxView.layer.cornerRadius = 40
         bigBoxView.clipsToBounds = true
         bigBoxView.alpha = 0
